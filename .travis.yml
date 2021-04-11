@@ -15,15 +15,15 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t u-feed-api . 
+  - docker build -t u-user-api . 
     --build-arg POSTGRES_USERNAME="$POSTGRES_USERNAME"
     --build-arg POSTGRES_PASSWORD="$POSTGRES_PASSWORD"
     --build-arg POSTGRES_HOST="$POSTGRES_HOST"
     --build-arg POSTGRES_DB="$POSTGRES_DB"
     --build-arg JWT_SECRET="$JWT_SECRET"
     --build-arg URL="$URL"
-  - docker tag u-feed-api harunrst/u-feed-api:latest
+  - docker tag u-user-api harunrst/u-user-api:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push harunrst/u-feed-api
+  - docker push harunrst/u-user-api
