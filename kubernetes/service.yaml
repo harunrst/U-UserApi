@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: userapi
+  name: userapi-svc
   labels:
-    run: userapi
+    app: userapi
 spec:
   ports:
   - port: 80
     protocol: TCP
   selector:
-    run: userapi
+    app: userapi
