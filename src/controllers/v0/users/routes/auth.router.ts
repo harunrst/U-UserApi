@@ -53,7 +53,6 @@ router.get('/verification',
     });
 
 router.post('/login', async (req: Request, res: Response) => {
-  console.log("login triggered <3")
   const email = req.body.email;
   const password = req.body.password;
 
