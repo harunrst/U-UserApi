@@ -18,15 +18,15 @@ import {V0_USER_MODELS} from './controllers/v0/model.index';
 
   app.use(bodyParser.json());
 
-  app.use(cors({
-    allowedHeaders: [
-      'Origin', 'X-Requested-With',
-      'Content-Type', 'Accept',
-      'X-Access-Token', 'Authorization',
-    ],
-    methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
-    origin: config.url,
-  }));
+  // app.use(cors({
+  //   allowedHeaders: [
+  //     'Origin', 'X-Requested-With',
+  //     'Content-Type', 'Accept',
+  //     'X-Access-Token', 'Authorization',
+  //   ],
+  //   methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
+  //   origin: config.url,
+  // }));
 
   app.use('/api/v0/', IndexRouter);
 
