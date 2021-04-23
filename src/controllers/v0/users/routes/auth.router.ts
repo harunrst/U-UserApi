@@ -53,6 +53,7 @@ router.get('/verification',
     });
 
 router.post('/login', async (req: Request, res: Response) => {
+  console.log("The user: "+req.body.email+" has succesfully logged in.")
   const email = req.body.email;
   const password = req.body.password;
 
